@@ -1,0 +1,296 @@
+/* ==========================================================
+   Görsel Sıkıştırıcı – Özel stiller
+   Tailwind'in kapsamadığı detaylar burada tutulur.
+   ========================================================== */
+
+:root {
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.12);
+  --track: #232836;
+  --surface: #11141b;
+}
+
+html {
+  color-scheme: dark;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.3);
+  color: #fff;
+}
+
+/* ---------- Arka plan parıltısı ---------- */
+.bg-glow {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(600px circle at 15% 0%, rgba(56, 189, 248, 0.10), transparent 60%),
+    radial-gradient(500px circle at 90% 10%, rgba(52, 211, 153, 0.06), transparent 60%);
+}
+
+/* ---------- Başlık gradyanı ---------- */
+.text-gradient {
+  background: linear-gradient(90deg, #7dd3fc 0%, #38bdf8 45%, #6ee7b7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Gizlilik rozeti ---------- */
+.privacy-badge {
+  box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.05), 0 8px 30px -12px rgba(52, 211, 153, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+/* ---------- Sürükle-bırak alanı ---------- */
+.dropzone {
+  background-image:
+    radial-gradient(circle at 50% 40%, var(--accent-soft), transparent 65%);
+}
+
+.dropzone:hover,
+.dropzone:focus-within {
+  border-color: rgba(56, 189, 248, 0.55);
+  background-color: rgba(24, 28, 37, 0.8);
+}
+
+.dropzone:hover .dropzone-icon {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -10px rgba(56, 189, 248, 0.5);
+}
+
+/* Dosya alanın üzerindeyken: belirgin renk değişimi */
+.dropzone.is-dragover {
+  border-style: solid;
+  border-color: var(--accent);
+  background-color: rgba(56, 189, 248, 0.10);
+  box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.12), 0 20px 60px -20px rgba(56, 189, 248, 0.5);
+  transform: scale(1.01);
+}
+
+.dropzone.is-dragover .dropzone-icon {
+  transform: translateY(-6px) scale(1.08);
+  background-color: var(--accent);
+  box-shadow: 0 12px 30px -8px rgba(56, 189, 248, 0.7);
+}
+
+.dropzone.is-dragover .dropzone-icon svg {
+  color: #0b0d12;
+}
+
+/* Sürükleme sırasında içerik tıklama/hover olaylarını yutmasın */
+.dropzone.is-dragover > * {
+  pointer-events: none;
+}
+
+.dropzone-text-active {
+  display: none;
+  color: #7dd3fc;
+}
+
+.dropzone.is-dragover .dropzone-text-idle {
+  display: none;
+}
+
+.dropzone.is-dragover .dropzone-text-active {
+  display: inline;
+}
+
+.dropzone:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* ---------- Format seçimi ---------- */
+.format-option {
+  cursor: pointer;
+}
+
+.format-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0.75rem 0.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #181c25;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+}
+
+.format-chip small {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.format-option:hover .format-chip {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.peer:checked + .format-chip {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: #fff;
+}
+
+.peer:checked + .format-chip small {
+  color: #7dd3fc;
+}
+
+.peer:focus-visible + .format-chip {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Kalite slider ---------- */
+/* --value değişkeni ileride JS ile güncellenecek (dolu kısım) */
+.range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--accent) 0%, var(--accent) var(--value, 50%), var(--track) var(--value, 50%));
+  cursor: pointer;
+}
+
+.range-slider:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid var(--accent);
+  box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.15);
+  transition: box-shadow 0.15s;
+}
+
+.range-slider:hover::-webkit-slider-thumb {
+  box-shadow: 0 0 0 9px rgba(56, 189, 248, 0.2);
+}
+
+.range-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid var(--accent);
+  box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.15);
+}
+
+.range-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: transparent;
+}
+
+/* ---------- Özellik kartları ---------- */
+.feature-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(17, 20, 27, 0.6);
+  padding: 1.25rem;
+}
+
+.feature-card h3 {
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.feature-card p {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+/* ---------- Sonuç kartları ---------- */
+.result-card {
+  animation: card-in 0.25s ease-out;
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.result-card.is-error {
+  border-color: rgba(248, 113, 113, 0.3);
+}
+
+.result-card.is-error [data-role="dimensions"] {
+  color: #fca5a5;
+}
+
+.saving-badge {
+  min-width: 3.5rem;
+  border-radius: 999px;
+  padding: 0.125rem 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(52, 211, 153, 0.12);
+  color: #6ee7b7;
+}
+
+/* Yeni dosya orijinalden büyükse uyarı rengi */
+.saving-badge.is-worse {
+  background: rgba(251, 191, 36, 0.12);
+  color: #fcd34d;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  background: var(--accent);
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0b0d12;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.download-btn:hover {
+  background: #7dd3fc;
+}
+
+.download-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.download-btn:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.download-btn.is-disabled {
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: #64748b;
+}
+
+/* ---------- Hareket azaltma tercihi ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
