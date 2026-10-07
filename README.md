@@ -10,8 +10,9 @@
 
 JPEG, PNG ve WebP görselleri saniyeler içinde küçülten, formatlar arasında dönüştüren, tarayıcı tabanlı bir araç. Tüm işlemler cihazınızda yapılır: hesap açmanız, dosya yüklemeniz veya bir sunucuya güvenmeniz gerekmez.
 
-<!-- Ekran görüntüsü eklemek için: görseli repoya koyup aşağıdaki satırın yorumunu kaldırın -->
-<!-- ![Uygulama ekran görüntüsü](docs/ekran-goruntusu.png) -->
+### 👉 [Canlı Demo](https://pietro379.github.io/gorsel-sikistirici/)
+
+![Uygulama ekran görüntüsü](docs/ekran-goruntusu.png)
 
 ---
 
@@ -60,7 +61,7 @@ Gizlilik iddiasını bize güvenmeden test edebilirsiniz:
 
 ## 🚀 Kullanım
 
-Kurulum veya derleme adımı yoktur.
+En hızlı yol: **[canlı demoyu](https://pietro379.github.io/gorsel-sikistirici/) açın.** Yerelde çalıştırmak için kurulum veya derleme adımı gerekmez:
 
 ```bash
 git clone https://github.com/pietro379/gorsel-sikistirici.git
@@ -131,6 +132,8 @@ gorsel-sikistirici/
 ├── index.html   # Sayfa yapısı ve arayüz
 ├── style.css    # Tailwind dışındaki özel stiller
 ├── app.js       # Sıkıştırma, sürükle-bırak ve ZIP mantığı
+├── docs/
+│   └── ekran-goruntusu.png
 └── README.md
 ```
 
