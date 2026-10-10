@@ -10,7 +10,7 @@
 
 JPEG, PNG ve WebP görselleri saniyeler içinde küçülten, formatlar arasında dönüştüren, tarayıcı tabanlı bir araç. Tüm işlemler cihazınızda yapılır: hesap açmanız, dosya yüklemeniz veya bir sunucuya güvenmeniz gerekmez.
 
-### 👉 [Canlı Demo](https://pietro379.github.io/gorsel-sikistirici/)
+### 👉 [Canlı Demo](https://pietro379.github.io/image-compressor/)
 
 ![Uygulama ekran görüntüsü](docs/ekran-goruntusu.png)
 
@@ -61,11 +61,11 @@ Gizlilik iddiasını bize güvenmeden test edebilirsiniz:
 
 ## 🚀 Kullanım
 
-En hızlı yol: **[canlı demoyu](https://pietro379.github.io/gorsel-sikistirici/) açın.** Yerelde çalıştırmak için kurulum veya derleme adımı gerekmez:
+En hızlı yol: **[canlı demoyu](https://pietro379.github.io/image-compressor/) açın.** Yerelde çalıştırmak için kurulum veya derleme adımı gerekmez:
 
 ```bash
-git clone https://github.com/pietro379/gorsel-sikistirici.git
-cd gorsel-sikistirici
+git clone https://github.com/pietro379/image-compressor.git
+cd image-compressor
 ```
 
 Ardından `index.html` dosyasını tarayıcınızda açın. İsterseniz basit bir yerel sunucu da kullanabilirsiniz:
@@ -128,7 +128,7 @@ Ayarlar değiştirildiğinde, bellekteki görseller dosyalar yeniden okunmadan t
 ## 📁 Proje Yapısı
 
 ```
-gorsel-sikistirici/
+image-compressor/
 ├── index.html   # Sayfa yapısı ve arayüz
 ├── style.css    # Tailwind dışındaki özel stiller
 ├── app.js       # Sıkıştırma, sürükle-bırak ve ZIP mantığı
@@ -161,4 +161,4 @@ Chrome, Edge, Firefox ve Safari'nin güncel sürümlerinde çalışır.
 
 ## 🤝 Katkıda Bulunma
 
-Hata bildirimleri ve öneriler için [issue](https://github.com/pietro379/gorsel-sikistirici/issues) açabilir veya pull request gönderebilirsiniz.
+Hata bildirimleri ve öneriler için [issue](https://github.com/pietro379/image-compressor/issues) açabilir veya pull request gönderebilirsiniz.
