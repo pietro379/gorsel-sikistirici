@@ -1,5 +1,5 @@
 /* ==========================================================
-   Görsel Sıkıştırıcı – Uygulama mantığı
+   Image Compressor – Uygulama mantığı
    Tüm işlemler tarayıcıda yapılır: FileReader ile okunur,
    Canvas ile yeniden kodlanır. Hiçbir veri ağa gönderilmez.
    ========================================================== */

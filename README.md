@@ -1,4 +1,4 @@
-# 🖼️ Görsel Sıkıştırıcı ve Dönüştürücü
+# 🖼️ Image Compressor & Converter
 
 **Görsellerinizi tarayıcınızda sıkıştırın ve dönüştürün. Hiçbir dosya sunucuya yüklenmez.**
 
